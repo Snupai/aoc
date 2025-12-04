@@ -1,0 +1,41 @@
+from rich.console import Console
+
+console = Console(highlight=True)
+
+import day1.solution
+import day2.solution
+import day3.solution
+import day4.solution
+
+def print_available_days():
+    console.print("What solution do you want to run?")
+    console.print("0. Exit")
+    console.print("1. Day 1")
+    console.print("2. Day 2")
+    console.print("3. Day 3")
+    console.print("4. Day 4")
+
+def run_day(day):
+    match day:
+        case "0":
+            print("Exiting...")
+            return
+        case 1:
+            day1.solution.main()
+        case 2:
+            day2.solution.main()
+        case 3:
+            day3.solution.main()
+        case 4:
+            day4.solution.main()
+        case _:
+            print("Invalid day")
+
+def main():
+    print_available_days()
+    day = int(input("Enter the day: "))
+    run_day(day)
+
+
+if __name__ == "__main__":
+    main()
