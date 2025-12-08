@@ -9,6 +9,7 @@ import day4.solution
 import day5.solution
 import day6.solution
 import day7.solution
+import day8.solution
 
 def print_available_days():
     console.print("What solution do you want to run?")
@@ -20,10 +21,11 @@ def print_available_days():
     console.print("5. Day 5")
     console.print("6. Day 6")
     console.print("7. Day 7")
-
+    console.print("8. Day 8")
+    
 def run_day(day):
     match day:
-        case "0":
+        case 0:
             print("Exiting...")
             return
         case 1:
@@ -40,6 +42,8 @@ def run_day(day):
             day6.solution.main()
         case 7:
             day7.solution.main()
+        case 8:
+            day8.solution.main()
         case _:
             print("Invalid day")
 
